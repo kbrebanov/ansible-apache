@@ -1,0 +1,5 @@
+---
+# vars file for apache (CentOS specific)
+
+apache_package_name: httpd
+apache_service_name: httpd

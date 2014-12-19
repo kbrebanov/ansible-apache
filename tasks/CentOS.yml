@@ -1,0 +1,6 @@
+---
+# tasks file for apache (CentOS specific)
+
+- name: Ensure Apache web server is installed
+  yum: name={{ apache_package_name }} state=present
+  tags: apache

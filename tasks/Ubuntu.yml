@@ -1,0 +1,6 @@
+---
+# tasks file for apache (Ubuntu specific)
+
+- name: Ensure Apache web server is installed
+  apt: name={{ apache_package_name }} state=present update_cache=yes
+  tags: apache

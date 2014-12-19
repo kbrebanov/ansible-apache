@@ -2,4 +2,5 @@
 # handlers file for apache
 
 - name: restart Apache
-  service: name=httpd state=restarted
+  service: name={{ apache_service_name }} state=restarted
+  tags: apache
