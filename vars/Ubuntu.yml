@@ -1,5 +1,13 @@
 ---
 # vars file for apache (Ubuntu specific)
 
-apache_package_name: apache2
+apache_packages:
+  - apache2
 apache_service_name: apache2
+
+apache_htcacheclean_run: auto
+apache_htcacheclean_mode: daemon
+apache_htcacheclean_size: 300M
+apache_htcacheclean_daemon_interval: 120
+apache_htcacheclean_path: /var/cache/apache2/mod_cache_disk
+apache_htcacheclean_options: -n

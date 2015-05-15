@@ -1,2 +1,10 @@
 ---
 # defaults file for apache
+
+apache_port: 80
+apache_ssl_port: 443
+apache_timeout: 300
+apache_keepalive: 'On'
+apache_max_keepalive_requests: 100
+apache_keepalive_timeout: 5
+apache_hostname_lookups: 'Off'

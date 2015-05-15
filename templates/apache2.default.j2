@@ -1,0 +1,28 @@
+# {{ ansible_managed }}
+
+### htcacheclean settings ###
+
+## run htcacheclean: yes, no, auto
+## auto means run if /etc/apache2/mods-enabled/cache_disk.load exists
+## default: auto
+HTCACHECLEAN_RUN={{ apache_htcacheclean_run }}
+
+## run mode: cron, daemon
+## run in daemon mode or as daily cron job
+## default: daemon
+HTCACHECLEAN_MODE={{ apache_htcacheclean_mode }}
+
+## cache size
+HTCACHECLEAN_SIZE={{ apache_htcacheclean_size }}
+
+## interval: if in daemon mode, clean cache every x minutes
+HTCACHECLEAN_DAEMON_INTERVAL={{ apache_htcacheclean_daemon_interval }}
+
+## path to cache
+## must be the same as in CacheRoot directive
+HTCACHECLEAN_PATH={{ apache_htcacheclean_path }}
+
+## additional options:
+## -n : be nice
+## -t : remove empty directories
+HTCACHECLEAN_OPTIONS="{{ apache_htcacheclean_options }}"
