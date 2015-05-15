@@ -20,7 +20,7 @@
     owner=root
     group=root
     mode=0644
-  notify: reload apache
+  notify: restart apache
   tags: apache
 
 - name: Create Apache envvars configuration file
@@ -40,7 +40,7 @@
     owner=root
     group=root
     mode=0644
-  notify: reload apache
+  notify: restart apache
   tags: apache
 
 - name: Create Apache main configuration file
@@ -50,7 +50,7 @@
     owner=root
     group=root
     mode=0644
-  notify: reload apache
+  notify: restart apache
   tags: apache
 
 - name: Ensure Apache service is started and enabled on boot
